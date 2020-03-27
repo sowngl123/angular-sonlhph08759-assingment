@@ -1,0 +1,52 @@
+<header class="jumbotron my-4">
+    <img src="https://i.imgur.com/Y0XmK1G.png" width=100%>
+</header>
+<div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <h1 class="my-4">Loại Hàng</h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item">Hàng Loại 1</a>
+          <a href="#" class="list-group-item">Hàng Loại 2</a>
+          <a href="#" class="list-group-item">Hàng Loại 3</a>
+        </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+                <div class="card h-100">
+                    <img class="card-img-top" [src]="product.img" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">{{product.name}}</h4>
+                        <p class="card-text">$ {{product.price}}</p>
+                        <p class="card-text">{{product.desc}}</p>
+                        <p class="card-text">{{product.status ? 'Hiện Còn' : 'Đã Hết'}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Delete</a>
+                        <a href="#" class="btn btn-primary">Detail</a>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>

@@ -1,0 +1,26 @@
+<head class="d-flex mb-3 pt-5 justify-content-between">
+    <h2>Manager</h2>
+    <button routerLink='/add-product'>Add Product</button>
+</head>
+<table style="width:100%" border="1">
+    <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <td>Img</td>
+        <th>Desc</th>
+        <th width="200">Action</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.img}}</td>
+        <td>{{product.desc}}</td>
+        <td>
+            <button class="btn btn-primary">Delete</button>
+            <button class="btn btn-primary" routerLink="#">Detail</button>
+            <button class="btn btn-primary" routerLink="#">Edit</button>
+        </td>
+    </tr>
+</table>
